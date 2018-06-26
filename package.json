@@ -1,16 +1,16 @@
 {
-  "name": "cordova-plugin-applist2",
-  "version": "1.0.2-dev",
+  "name": "cordova-plugin-applist3",
+  "version": "1.0.3",
   "description": "Cordova Applist Plugin",
   "cordova": {
-    "id": "cordova-plugin-applist2",
+    "id": "cordova-plugin-applist3",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jmrezayi2/Applist"
+    "url": "https://github.com/angelshurikan/Applist"
   },
   "keywords": [
     "cordova",
@@ -19,6 +19,6 @@
     "list",
     "cordova-android"
       ],
-  "author": "Jmreayi2",
+  "author": "Jmreayi2 & Angeliu'S Shurikan",
   "license": "Apache 2.0"
 }

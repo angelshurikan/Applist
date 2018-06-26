@@ -4,6 +4,7 @@
 ##Add the plugin using CLI:
 
 **cordova plugin add https://github.com/jmrezayi2/Applist**
+**cordova plugin add https://github.com/angelshurikan/Applist**
 
 or 
 
