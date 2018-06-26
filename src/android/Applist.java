@@ -23,6 +23,9 @@ import android.content.Context;
 import android.graphics.PixelFormat;
 import java.util.List;
 
+import android.graphics.Canvas;
+import android.util.Base64;
+
 public class Applist extends CordovaPlugin {
     public static final String ACTION_ADD_CALENDAR_ENTRY = "addCalendarEntry";
 
@@ -32,11 +35,20 @@ public class Applist extends CordovaPlugin {
     {
 
             File file = new File(path);
-            Bitmap bitmap=((BitmapDrawable)drawable).getBitmap();
-            ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100 /*ignored for PNG*/, bos);
-            byte[] bitmapdata = bos.toByteArray();
+//            Bitmap bitmap=((BitmapDrawable)drawable).getBitmap();
+//            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+//            bitmap.compress(Bitmap.CompressFormat.PNG, 100 /*ignored for PNG*/, bos);
+//            byte[] bitmapdata = bos.toByteArray();
 
+            Bitmap bitmap = Bitmap.createBitmap(iconDrawable.getIntrinsicWidth(),
+                    iconDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+            final Canvas canvas = new Canvas(bitmap);
+            iconDrawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+            iconDrawable.draw(canvas);
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+            byte[] bitmapdata = byteArrayOutputStream.toByteArray();
+//            return "data:image/png;base64," + Base64.encodeToString(byteArray, Base64.DEFAULT);
 
             //write the bytes in file
             FileOutputStream fos;
