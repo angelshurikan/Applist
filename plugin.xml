@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-           id="cordova-plugin-applist2"
-      version="0.1.4">
+<plugin id="cordova-plugin-applist3"
+        version="1.0.6"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>Applist</name>
     <description>Applist Plugin</description>
-    <license>MIT</license>
-    <keywords>phonegap,Applist</keywords>
-
-
+    <license>Apache 2.0</license>
+    <keywords>cordova,plugin,application,list</keywords>
     <js-module src="www/Applist.js" name="Applist">
-        <clobbers target="window.Applist" />
+        <clobbers target="cordova.plugins.Applist"/>
     </js-module>
-
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Applist">
-                <param name="android-package" value="org.jmrezayi2.Applist.Applist"/>
+                <param name="android-package" value="org.apache.cordova.applist.Applist"/>
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
         </config-file>
-
-        <source-file src="src/android/Applist.java" target-dir="src/org/jmrezayi2/Applist" />      
-     </platform>          
+        <source-file src="src/android/Applist.java" target-dir="src/org/apache/cordova/applist//Applist"/>
+    </platform>
 </plugin>
