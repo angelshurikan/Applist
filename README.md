@@ -1,14 +1,12 @@
 #A plugin to give the list of all installed apps with their icons
 
-
 ##Add the plugin using CLI:
 
-**cordova plugin add https://github.com/jmrezayi2/Applist**
 **cordova plugin add https://github.com/angelshurikan/Applist**
 
 or 
 
-**cordova plugin add cordova-plugin-applist2**
+**cordova plugin add cordova-plugin-applist3**
 
 ##Usage:
         
@@ -22,7 +20,7 @@ Gives the list of all apps installed on the phone in a JSON object and also save
 JSONObject info;
 app_list.info.name is app name 
 app_list.info.img is app-logo cache in storage--sdcard0 /com.ionicframework.xxx/Cache/ '.png'.
-
+app_list.CATEGORIE_x is boolean
 
 ##To Do:
 
